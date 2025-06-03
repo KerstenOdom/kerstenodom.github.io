@@ -2564,6 +2564,14 @@ body > article {
 		border-radius: 0;
 	}
 
+	.nav-left {
+		position: absolute;
+		left: 20px;
+		color: white;
+		text-decoration: none;
+		font-weight: bold;
+	}
+
 	#nav a:hover {
 		background-color: transparent;
 	}
@@ -2605,5 +2613,52 @@ body > article {
 
 	#copyright li:first-child {
 		margin-top: 0;
+	}
+
+	#nav {
+		position: fixed !important;
+		top: 0 !important;
+		left: 0 !important;
+		width: 100% !important;
+		height: 3.5em !important;
+		background-color: #282828 !important;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: space-between !important;
+		padding: 0 2em !important;
+		z-index: 10000 !important;
+	}
+
+	/* Left Link */
+	#nav-left a {
+		color: white !important;
+		text-decoration: none !important;
+		font-weight: 600 !important;
+		padding: 0 1em !important;
+		line-height: 3.5em !important;
+		white-space: nowrap !important;
+	}
+
+	#nav-left a:hover {
+		background-color: #383838;
+	}
+
+	/* Center Nav */
+	#nav-center {
+		display: flex !important;
+		gap: 1.5em !important;
+	}
+
+	#nav-center a {
+		color: white;
+		text-decoration: none;
+		font-weight: 600;
+		padding: 0 1em;
+		line-height: 3.5em;
+		white-space: nowrap;
+	}
+
+	#nav-center a:hover {
+		background-color: #383838;
 	}
 }

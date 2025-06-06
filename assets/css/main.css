@@ -1751,15 +1751,7 @@ article:last-child {
 	width: 100%;
 	aspect-ratio: 4 / 3;
 	margin: 0 0 2em 0;
-/*	overflow: hidden;*/
-}
-
-.image.featured2 {
-	/*display: block;
-	width: 100%;
-	aspect-ratio: 4 / 3;
-	margin: 0 0 2em 0;
-	overflow: hidden;*/
+	/*	overflow: hidden;*/
 }
 
 .image.featured img {
@@ -1769,17 +1761,44 @@ article:last-child {
 	display: block;
 }
 
-.image.featured2 img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	display: block;
+#fullscreenOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 2;
+	display: none;
+	pointer-events: none;
 }
 
-.image.featured2 img:hover {
-	opacity: 0.2;
-	transition: 0.3s ease;
-	backface-visibility: hidden;
+.image.featured2 {
+	/*display: block;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	margin: 0 0 2em 0;
+	overflow: hidden;*/
+	position: relative;
+	display: inline-block;
+	z-index: 1;
+}
+
+.image.featured2 img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.4s ease;
+	position: relative;
+}
+
+.image.featured2.hovered {
+	z-index: 3; /* Higher than the overlay */
+}
+
+.image.featured2.hovered img {
+	transform: scale(2);
 }
 
 .image.left {
@@ -2026,7 +2045,6 @@ ul.actions li:first-child {
 	top: 2em;
 	margin: -4em 0 4em -4em;
 	width: auto;
-	
 }
 
 .box2.style3 .image {
@@ -2099,7 +2117,7 @@ ul.actions li:first-child {
 
 .wrapper.style3 {
 	text-shadow: 1px 1px 0 #fff;
-		background-image: none;
+	background-image: none;
 	padding: 3em;
 }
 

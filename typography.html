@@ -10,9 +10,9 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="container">
-				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="portfolio">Portfolio</a></li>
 				<li><a href="/">Kersten Odom</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="contact">Contact</a></li>
 			</ul>
 		</nav>
 
@@ -23,10 +23,10 @@
 					<h2>Typography</h2>
 				</header>
 				<div class="button-center">
-					<a href="illustrations.html">Illustrations</a>
-					<a href="grettingcards.html">Greeting Cards</a>
-					<a href="logos.html">Logo Designs</a>
-					<a href="typography.html">Typography</a>
+					<a href="illustrations">Illustrations</a>
+					<a href="grettingcards">Greeting Cards</a>
+					<a href="logos">Logo Designs</a>
+					<a href="typography">Typography</a>
 				</div>
 				<div class="row">
 					<div class="col-4 col-6-medium col-12-small">
@@ -48,6 +48,7 @@
 					</div>
 				</div>
 			</div>
+			<div id="fullscreenOverlay"></div>
 		</article>
 
 		<!-- Contact -->
@@ -60,5 +61,22 @@
 				</footer>
 			</div>
 		</article>
+
+		<script>
+			const images = document.querySelectorAll(".image.featured2");
+			const overlay = document.getElementById("fullscreenOverlay");
+
+			images.forEach((image) => {
+				image.addEventListener("mouseenter", () => {
+					overlay.style.display = "block";
+					image.classList.add("hovered");
+				});
+
+				image.addEventListener("mouseleave", () => {
+					overlay.style.display = "none";
+					image.classList.remove("hovered");
+				});
+			});
+		</script>
 	</body>
 </html>
